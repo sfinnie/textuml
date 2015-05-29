@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="helloTrafo" default="main">
+  <target name="main">
+
+    <epsilon.emf.loadModel
+      name="TextUMLSourceModel"
+      modelfile="helloWorld.uml"
+      metamodeluri="http://www.eclipse.org/uml2/2.1.0/UML"
+      read="true"
+      store="false"
+      />
+
+    <epsilon.eol>
+      MyUMLModel!Class.all.size().println();
+      <model ref="TextUMLSourceModel"/>
+    </epsilon.eol>
+
+  </target>
+</project>
