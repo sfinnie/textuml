@@ -1,8 +1,8 @@
 rule UMLClass2Node 
-	transform c : UML!Class
+	transform c : helloWorld!Class
 	to n : Graph!Node {
 	
-	n.name = umlcls.name;
+	n.name = c.name;
 	
 	// If t is not the top tree
 	// create an edge connecting n
