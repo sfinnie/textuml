@@ -15,14 +15,23 @@
 <project default="main">
 
  	<target name="loadModels">
- 		<epsilon.emf.register file="metamodels/Tree.ecore"/>
- 		<epsilon.emf.register file="metamodels/Graph.ecore"/>
- 		 		
+ 		<!-- <epsilon.emf.register file="metamodels/tree.ecore"/>-->
+ 		<epsilon.emf.register file="metamodels/graph.ecore"/>
+ 		<epsilon.emf.loadRegisteredMetamodel
+ 		      name="UML"
+ 		      metamodeluri="http://www.eclipse.org/uml2/4.0.0/UML"
+ 		      />
+ 		
+ 		<!--
  		<epsilon.emf.loadModel name="Tree"
                                        modelFile="models/tree.model"
                                        metamodelUri="Tree"
                                        read="true" store="false"/>
- 		
+ 		-->
+ 		<epsilon.emf.loadModel name="helloWorld"
+                                       modelFile="models/helloWorld.uml"
+                                       metamodelUri="http://www.eclipse.org/uml2/4.0.0/UML"
+                                       read="true" store="false"/>
  		<epsilon.emf.loadModel name="Graph"
                                        modelFile="generated/graph.model"
                                        metamodelUri="Graph"
@@ -30,8 +39,14 @@
  	</target>
  	
 	<target name="main" depends="loadModels">		
+		<!--
 		<epsilon.etl src="m2m/Tree2Graph.etl">
 			<model ref="Tree"/>
+			<model ref="Graph"/>
+		</epsilon.etl>
+		-->
+		<epsilon.etl src="m2m/uml2cs.etl">
+			<model ref="helloWorld"/>
 			<model ref="Graph"/>
 		</epsilon.etl>
 	</target>
