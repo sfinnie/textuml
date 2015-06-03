@@ -1,0 +1,21 @@
+package helloWorld;
+
+import mdd_types;
+
+class Dog
+	attribute name: String;
+end;
+
+class Person
+	attribute name: String;
+end;
+
+association Ownership
+  navigable role owner : Person[1];
+  navigable role owns : Dog[*]; 
+  
+  operation create(p: Person, d: Dog): Ownership;
+  
+end;
+
+end.

@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<Graph:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Graph="Graph" name="HelloWorld"/>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Graph="Graph">
+  <Graph:Node name="Dog"/>
+  <Graph:Node name="Person"/>
+</xmi:XMI>

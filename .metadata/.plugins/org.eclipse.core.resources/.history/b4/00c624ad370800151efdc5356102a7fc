@@ -1,0 +1,14 @@
+package helloWorld;
+
+import mdd_types;
+
+class HelloWorld
+	attribute name: String;
+end;
+
+association CartItemProduct
+  navigable role item : CartItem[*];
+  role product : Product[1]; 
+end;
+
+end.
