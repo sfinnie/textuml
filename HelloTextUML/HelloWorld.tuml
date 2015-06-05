@@ -3,7 +3,7 @@ package helloWorld;
 import mdd_types;
 
 enumeration Gender
-        male, female
+        male; female;
 end;
 
 class Dog
@@ -13,11 +13,11 @@ end;
 
 class Person
 	attribute name: String := "Fido";
-	operation adopt(p: Person, d: Dog): Ownership;
 	
-	operation setName()
+	operation adopt(d: Dog);
 	begin
-		self.name := "foo";
+		link Ownership (owner := self, owns := d);
+		return;
 	end;
 end;
 

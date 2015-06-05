@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mdd_extensions="profiles/mdd_extensions" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="profiles/mdd_extensions pathmap://MDD_PROFILES/mdd_extensions.uml#_http2F2Fwww.eclipse.org2Fuml22F2.0.02FUML-mdd_extensions">
+  <uml:Package xmi:id="_0" name="helloWorld" URI="HelloTextUML/helloWorld">
+    <eAnnotations xmi:id="_com.abstratt2Fmdd2F" source="com.abstratt/mdd/">
+      <details xmi:id="_com.abstratt2Fmdd2F-_details.0" key="dateCreated" value="2015/06/05 08:39:49 909 +0100"/>
+    </eAnnotations>
+    <packageImport xmi:id="_packageImport.0">
+      <importedPackage xmi:type="uml:Model" href="pathmap://MDD_LIBRARIES/mdd_types.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="Gender" name="Gender">
+      <eAnnotations xmi:id="Gender-_com.abstratt2Fmdd2Funit" source="com.abstratt/mdd/unit">
+        <details xmi:id="Gender-_com.abstratt2Fmdd2Funit-_details.0" key="name" value="HelloWorld.tuml"/>
+      </eAnnotations>
+      <generalization xmi:id="Gender-_generalization.0">
+        <general xmi:type="uml:DataType" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Value"/>
+      </generalization>
+      <ownedLiteral xmi:id="Gender-male" name="male"/>
+      <ownedLiteral xmi:id="Gender-female" name="female"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="Dog" name="Dog">
+      <eAnnotations xmi:id="Dog-_com.abstratt2Fmdd2Funit" source="com.abstratt/mdd/unit">
+        <details xmi:id="Dog-_com.abstratt2Fmdd2Funit-_details.0" key="name" value="HelloWorld.tuml"/>
+      </eAnnotations>
+      <generalization xmi:id="Dog-_generalization.0">
+        <general xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Object"/>
+      </generalization>
+      <ownedAttribute xmi:id="Dog-gender" name="gender" visibility="public" type="Gender">
+        <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Dog-gender-_lowerValue" value="1">
+          <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Integer"/>
+        </lowerValue>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Dog-gender-_upperValue" value="1">
+          <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Integer"/>
+        </upperValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="Dog-name" name="name" visibility="public">
+        <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Dog-name-_lowerValue" value="1">
+          <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Integer"/>
+        </lowerValue>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Dog-name-_upperValue" value="1">
+          <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Integer"/>
+        </upperValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="Person" name="Person">
+      <eAnnotations xmi:id="Person-_com.abstratt2Fmdd2Funit" source="com.abstratt/mdd/unit">
+        <details xmi:id="Person-_com.abstratt2Fmdd2Funit-_details.0" key="name" value="HelloWorld.tuml"/>
+      </eAnnotations>
+      <generalization xmi:id="Person-_generalization.0">
+        <general xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Object"/>
+      </generalization>
+      <ownedAttribute xmi:id="Person-name" name="name" visibility="public">
+        <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Person-name-_lowerValue" value="1">
+          <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Integer"/>
+        </lowerValue>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Person-name-_upperValue" value="1">
+          <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Integer"/>
+        </upperValue>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="Person-name-_defaultValue" value="Fido">
+          <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#String"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedOperation xmi:id="Person-adopt" name="adopt" visibility="public" method="Person-__activity_adopt">
+        <ownedParameter xmi:id="Person-adopt-d" name="d" type="Dog" effect="create">
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Person-adopt-d-_lowerValue" value="1">
+            <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Integer"/>
+          </lowerValue>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Person-adopt-d-_upperValue" value="1">
+            <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Integer"/>
+          </upperValue>
+        </ownedParameter>
+      </ownedOperation>
+      <nestedClassifier xmi:type="uml:Activity" xmi:id="Person-__activity_adopt" name="__activity_adopt" specification="Person-adopt" node="Person-__activity_adopt-body" group="Person-__activity_adopt-body">
+        <ownedParameter xmi:id="Person-__activity_adopt-d" name="d" type="Dog" effect="create">
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Person-__activity_adopt-d-_lowerValue" value="1">
+            <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Integer"/>
+          </lowerValue>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Person-__activity_adopt-d-_upperValue" value="1">
+            <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Integer"/>
+          </upperValue>
+        </ownedParameter>
+        <structuredNode xmi:id="Person-__activity_adopt-body" name="body" mustIsolate="true">
+          <variable xmi:id="Person-__activity_adopt-body-d" name="d" type="Dog">
+            <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Person-__activity_adopt-body-d-_lowerValue" value="1">
+              <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Integer"/>
+            </lowerValue>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Person-__activity_adopt-body-d-_upperValue" value="1">
+              <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Integer"/>
+            </upperValue>
+          </variable>
+          <node xmi:type="uml:StructuredActivityNode" xmi:id="Person-__activity_adopt-body-_node.0">
+            <node xmi:type="uml:StructuredActivityNode" xmi:id="Person-__activity_adopt-body-_node.0-_node.0">
+              <edge xmi:type="uml:ObjectFlow" xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_edge.0" target="Person-__activity_adopt-body-_node.0-_node.0-_node.0-_inputValue.0" source="Person-__activity_adopt-body-_node.0-_node.0-_node.1-_result"/>
+              <edge xmi:type="uml:ObjectFlow" xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_edge.1" target="Person-__activity_adopt-body-_node.0-_node.0-_node.0-_inputValue.1" source="Person-__activity_adopt-body-_node.0-_node.0-_node.2-_result"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_edge.2" target="Person-__activity_adopt-body-_node.0-_node.0-_node.3" source="Person-__activity_adopt-body-_node.0-_node.0-_node.0"/>
+              <node xmi:type="uml:CreateLinkAction" xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_node.0" outgoing="Person-__activity_adopt-body-_node.0-_node.0-_edge.2">
+                <endData xmi:type="uml:LinkEndCreationData" xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_node.0-_endData.0" end="Ownership-owner" value="Person-__activity_adopt-body-_node.0-_node.0-_node.0-_inputValue.0"/>
+                <endData xmi:type="uml:LinkEndCreationData" xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_node.0-_endData.1" end="Ownership-owns" value="Person-__activity_adopt-body-_node.0-_node.0-_node.0-_inputValue.1"/>
+                <inputValue xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_node.0-_inputValue.0" incoming="Person-__activity_adopt-body-_node.0-_node.0-_edge.0" type="Person"/>
+                <inputValue xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_node.0-_inputValue.1" incoming="Person-__activity_adopt-body-_node.0-_node.0-_edge.1" type="Dog"/>
+              </node>
+              <node xmi:type="uml:ReadSelfAction" xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_node.1">
+                <result xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_node.1-_result" outgoing="Person-__activity_adopt-body-_node.0-_node.0-_edge.0" type="Person"/>
+              </node>
+              <node xmi:type="uml:ReadVariableAction" xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_node.2" variable="Person-__activity_adopt-body-d">
+                <result xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_node.2-_result" outgoing="Person-__activity_adopt-body-_node.0-_node.0-_edge.1" type="Dog">
+                  <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_node.2-_result-_lowerValue" value="1">
+                    <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Integer"/>
+                  </lowerValue>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_node.2-_result-_upperValue" value="1">
+                    <type xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#Integer"/>
+                  </upperValue>
+                </result>
+              </node>
+              <node xmi:type="uml:ActivityFinalNode" xmi:id="Person-__activity_adopt-body-_node.0-_node.0-_node.3" incoming="Person-__activity_adopt-body-_node.0-_node.0-_edge.2"/>
+            </node>
+          </node>
+        </structuredNode>
+      </nestedClassifier>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="Ownership" name="Ownership" memberEnd="Ownership-owner Ownership-owns" navigableOwnedEnd="Ownership-owner Ownership-owns">
+      <ownedEnd xmi:id="Ownership-owner" name="owner" type="Person" association="Ownership">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Ownership-owner-_lowerValue" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Ownership-owner-_upperValue" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="Ownership-owns" name="owns" type="Dog" association="Ownership">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Ownership-owns-_lowerValue"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Ownership-owns-_upperValue" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:id="_profileApplication.0">
+      <eAnnotations xmi:id="_profileApplication.0-_http2F2Fwww.eclipse.org2Fuml22F2.0.02FUML" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://MDD_PROFILES/mdd_extensions.uml#_http2F2Fwww.eclipse.org2Fuml22F2.0.02FUML-mdd_extensions"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://MDD_PROFILES/mdd_extensions.uml#_0"/>
+    </profileApplication>
+  </uml:Package>
+  <mdd_extensions:BasicValue xmi:id="_1" base_LiteralString="Person-name-_defaultValue">
+    <basicType xmi:type="uml:Class" href="pathmap://MDD_LIBRARIES/mdd_types.uml#String"/>
+  </mdd_extensions:BasicValue>
+</xmi:XMI>

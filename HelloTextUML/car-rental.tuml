@@ -1,5 +1,7 @@
 package car_rental;
 
+import mdd_types;
+
 class Car
 
     derived attribute description : String := {
@@ -9,9 +11,7 @@ class Car
     attribute plate : String;
 
     attribute price : Double := 500.0
-        (* Price mustbe $50 at least. *)
         invariant PriceAboveMinimum { self.price >= 50.0 }
-        (* Price cannot be above $500. *)
         invariant PriceBelowMaximum { self.price <= 500.0 };
 
     derived attribute available : Boolean := {
@@ -23,6 +23,7 @@ class Car
             (l.car == self) and l.inProgress
         })
     };
+
 
     attribute year : Integer := { Date#today().year() }
         (* Year must be later than 1990 *)

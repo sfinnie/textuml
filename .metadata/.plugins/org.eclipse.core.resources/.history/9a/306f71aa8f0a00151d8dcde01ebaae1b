@@ -1,0 +1,27 @@
+package helloWorld;
+
+import mdd_types;
+
+enumeration Gender
+        male, female
+end;
+
+class Dog
+	attribute gender: Gender;
+	attribute name: String;
+end;
+
+class Person
+	attribute name: String := "Fido";
+	operation adopt(p: Person, d: Dog): Ownership;
+	begin
+		link Ownershipzoopla (owner := p, owns := d);
+	end;
+end;
+
+association Ownership
+  navigable role owner : Person[1];
+  navigable role owns : Dog[*];   
+end;
+
+end.
