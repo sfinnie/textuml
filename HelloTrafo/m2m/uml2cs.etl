@@ -1,5 +1,5 @@
 rule UMLClass2Node 
-	transform c : helloWorld!Class
+	transform c : TUML!Class
 	to n : Graph!Node {
 	
 	n.name = c.name;
