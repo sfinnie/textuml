@@ -22,11 +22,4 @@ rule UMLAssociation2Edge
 	
 	e.source ::= a.ownedEnd.first().type;
 	e.target ::= a.ownedEnd.last().type;
-//	var src = a.ownedEnd.first().type.equivalent();
-//	var tgt = a.ownedEnd.last().type.equivalent();
-	
-//	e.source = src;
-//	e.target = tgt;
-	
-	
 }

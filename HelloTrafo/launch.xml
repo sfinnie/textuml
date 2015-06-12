@@ -35,20 +35,18 @@
  		<epsilon.emf.loadModel name="Graph"
                                        modelFile="generated/graph.model"
                                        metamodelUri="Graph"
-                                       read="false" store="true"/>
+                                       read="true" store="true"/>
  	</target>
  	
 	<target name="main" depends="loadModels">		
-		<!--
-		<epsilon.etl src="m2m/Tree2Graph.etl">
-			<model ref="Tree"/>
-			<model ref="Graph"/>
-		</epsilon.etl>
-		-->
 		<epsilon.etl src="m2m/uml2cs.etl">
 			<model ref="TUML"/>
 			<model ref="Graph"/>
 		</epsilon.etl>
+		
+		<epsilon.egl src="m2t/graph2dot.egl" target="generated/graph.dot">
+			
+		</epsilon.egl>
 	</target>
 </project>
 

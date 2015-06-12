@@ -4,4 +4,8 @@
   <Graph:Node name="Person">
     <outgoing target="/0" label="Ownership"/>
   </Graph:Node>
+  <Graph:Node name="Dog" incoming="/3/@outgoing.0"/>
+  <Graph:Node name="Person">
+    <outgoing target="/2" label="Ownership"/>
+  </Graph:Node>
 </xmi:XMI>
